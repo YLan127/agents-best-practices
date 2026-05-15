@@ -1,5 +1,7 @@
 # agents-best-practices
 
+<img src="icon.jpeg" alt="agents-best-practices icon" width="627" />
+
 `agents-best-practices` is a general-purpose Agent Skill for Codex, Claude
 Code, and other tools that support the `SKILL.md` skill format. It helps with
 designing, auditing, refactoring, and explaining agentic harnesses across
