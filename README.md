@@ -1,7 +1,9 @@
 # agents-best-practices
 
-`agents-best-practices` is a general-purpose Codex skill for designing,
-auditing, refactoring, and explaining agentic harnesses across domains.
+`agents-best-practices` is a general-purpose Agent Skill for Codex, Claude
+Code, and other tools that support the `SKILL.md` skill format. It helps with
+designing, auditing, refactoring, and explaining agentic harnesses across
+domains.
 
 It is not limited to coding agents. The same harness patterns apply to
 research, support, operations, sales, finance, data analysis, procurement,
@@ -27,7 +29,7 @@ specific harness design problem.
 
 ## Installation
 
-Install the skill by cloning this repository into your Codex skills directory:
+### Codex
 
 ```sh
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
@@ -43,6 +45,28 @@ To update an existing installation:
 cd "${CODEX_HOME:-$HOME/.codex}/skills/agents-best-practices"
 git pull --ff-only
 ```
+
+### Claude Code
+
+Install it as a personal Claude Code skill:
+
+```sh
+mkdir -p "$HOME/.claude/skills"
+git clone https://github.com/DenisSergeevitch/agents-best-practices.git \
+  "$HOME/.claude/skills/agents-best-practices"
+```
+
+Or install it for one project:
+
+```sh
+mkdir -p .claude/skills
+git clone https://github.com/DenisSergeevitch/agents-best-practices.git \
+  .claude/skills/agents-best-practices
+```
+
+Claude Code watches existing skill directories for changes. If the top-level
+skills directory did not exist when Claude Code started, restart Claude Code so
+it can discover the new directory.
 
 ## Table of Contents
 
