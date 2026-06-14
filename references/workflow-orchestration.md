@@ -4,6 +4,10 @@
 
 Workflow orchestration is an advanced harness pattern for large tasks that are too broad, noisy, costly, or verification-heavy for one linear model-tool loop.
 
+<p align="center">
+  <img src="../assets/agents-best-practices-illustrations/02-workflow-orchestration-schema.svg" alt="Workflow orchestration schema: objective to generated workflow program, harness gate, worker fan-out, verification gates, integration, and state store" width="420" />
+</p>
+
 The model may design the workflow, but the harness must own execution:
 
 ```text
@@ -204,6 +208,8 @@ Review billing.
 Prefer packets that can fail independently. A failed packet should produce a structured failure result, not block unrelated packets unless it is foundational.
 
 ## Worker contexts
+
+A worker is a bounded model run, agent invocation, or sandboxed task runner assigned to one packet of the workflow. It is not a separate authority. It should behave like a scoped executor: receive a packet-specific prompt, use only approved tools, return a structured result, and stop. A worker may read, draft, inspect, classify, or edit only within the permissions the harness grants for that packet.
 
 Each worker context should receive only what it needs:
 
