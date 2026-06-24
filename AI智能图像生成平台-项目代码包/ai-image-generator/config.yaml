@@ -1,0 +1,60 @@
+# 用户信息配置
+USER_INFO:
+  student_id: "423830227"
+  student_name: "梁煜岚"
+  show_info: true  # 是否在前端显示学号姓名
+
+# 模型配置
+MODEL:
+  # 默认模型ID（可替换为其他Stable Diffusion模型）
+  default_model: "stabilityai/stable-diffusion-2-1-base"
+  # 可用模型列表
+  available_models:
+    - "stabilityai/stable-diffusion-2-1-base"
+    - "stabilityai/stable-diffusion-xl-base-1.0"
+    - "runwayml/stable-diffusion-v1-5"
+  # 设备配置：auto/cpu/cuda
+  device: "auto"
+  # 是否使用安全检查
+  safety_checker: true
+
+# 图像生成默认参数
+GENERATION:
+  # 默认图像宽度
+  width: 512
+  # 默认图像高度
+  height: 512
+  # 默认推理步数
+  num_inference_steps: 30
+  # 默认CFG Scale
+  guidance_scale: 7.5
+  # 默认种子（-1表示随机）
+  seed: -1
+  # 每次生成图片数量
+  num_images: 1
+  # 负面提示词
+  negative_prompt: "blurry, bad quality, distorted, ugly, deformed"
+
+# 应用配置
+APP:
+  # 页面标题
+  title: "AI 智能图像生成平台"
+  # 页面副标题
+  subtitle: "基于 Stable Diffusion 的创意图像生成工具"
+  # 主题颜色
+  theme_color: "#1E88E5"
+  # 最大图像尺寸限制
+  max_dimension: 1024
+  # 是否启用历史记录
+  enable_history: true
+  # 历史记录最大数量
+  max_history: 20
+
+# 输出配置
+OUTPUT:
+  # 输出目录
+  output_dir: "./output"
+  # 图像格式：png/jpg
+  image_format: "png"
+  # 图像质量（jpg格式时有效，0-100）
+  image_quality: 95
